@@ -1,5 +1,5 @@
 import React from "react";
-import {withRouter} from 'react-router-dom';
+//import {withRouter} from 'react-router-dom';
 import './menu-item.style.scss'
 
 
@@ -15,7 +15,7 @@ const  MenuItem= ({title, imageUrl ,size,history,linkUrl,match})=>(
             <h1 className="title">{title.toUpperCase()}</h1>
             <span className="subtitle">SHOP NOW</span>
         </div>
-    </div>
+     </div>
 );
 
-export default withRouter( MenuItem); 
+export default MenuItem; // withRouter givin access to Menuitem for history component
