@@ -1,55 +1,18 @@
 import * as React from "react";  //import React from 'react';
 import * as ReactDOM from "react-dom";  //import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {Provider} from 'react-redux'
 import { BrowserRouter ,RouterProvider} from 'react-router-dom';
-//import reportWebVitals from './reportWebVitals';
-
-/*
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-*/
+import store from './redux/store'
+import App from './App';
+import './index.css';
 
 
-/*1
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
-
-*/
-
-
-
-
-
-
-
-//import React from 'react';
-//import ReactDOM from 'react-dom';
-//import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
-
-/*
 ReactDOM.render(
-  <Router> {/* Wrap your App component with Router /}
-  <App />
-  </Router>,
-  document.getElementById('root')
-  );
-  
-*/
- 
- ReactDOM.render(
-   <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 
 
@@ -59,4 +22,47 @@ ReactDOM.render(
 
 
 
+  //import reportWebVitals from './reportWebVitals';
+  
+  /*
+  import {
+    createBrowserRouter,
+    RouterProvider,
+  } from "react-router-dom";
+  */
+  
+  
+  /*1
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+    <React.StrictMode>
+      <BrowserRouter>
+      <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+  
+  */
+  
+  
+  
+  
+  
+  
+  
+  //import React from 'react';
+  //import ReactDOM from 'react-dom';
+  //import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
+  
+  /*
+  ReactDOM.render(
+    <Router> {/* Wrap your App component with Router /}
+    <App />
+    </Router>,
+    document.getElementById('root')
+    );
+    
+  */
+  
   );
